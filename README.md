@@ -1,10 +1,17 @@
- ## 🔍 Port Scanner
+## 🔍 Port Scanner
 simple Bash script that scans ports 1-30 on 127.0.0.1 (localhost) to identify open ports. It uses /dev/tcp for connectivity testing and includes a timeout mechanism to avoid infinite waits.
+
 ## 🚀 How It Works
 1️⃣ The script displays a message and waits 3 seconds before starting the scan.
 2️⃣ It loops through ports 1 to 30, attempting to establish a connection.
 3️⃣ If a connection succeeds, the port is marked as open.
 4️⃣ If no open ports are found, the script notifies the user.
+
+## ⚠️ Notes
+✅ Works on Linux/macOS with Bash.
+✅ Scans localhost (127.0.0.1) only.
+✅ Modify the port range by changing seq 1 30.
+✅ Run as a normal user (no root required).
 
 ## 📜 Code Structure
 ```bash
@@ -41,7 +48,3 @@ if [ "$found_ports" -eq 0 ]; then
     
 fi
 
-## ⚠️ Notes✅ Works on Linux/macOS with Bash.
-✅ Scans localhost (127.0.0.1) only.
-✅ Modify the port range by changing seq 1 30.
-✅ Run as a normal user (no root required).
